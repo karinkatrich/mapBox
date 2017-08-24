@@ -13,7 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    public var users = [CustomPointAnnotation]()
+    
+    func getUsers() -> [CustomPointAnnotation] {
+        return self.users
+    }
+    
+    public func addUser(user: CustomPointAnnotation) {
+        users.append(user)
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

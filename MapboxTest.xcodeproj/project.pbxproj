@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0910869FDBD63A3AC191CE30 /* Pods_MapboxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B141871E4C28D017C4234B1F /* Pods_MapboxTest.framework */; };
+		9A4F37D91F4A244F00EF12F5 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F37D81F4A244F00EF12F5 /* CreateViewController.swift */; };
+		9A4F37DB1F4A25BC00EF12F5 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F37DA1F4A25BC00EF12F5 /* GalleryViewController.swift */; };
+		9A4F37DD1F4AC73A00EF12F5 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F37DC1F4AC73A00EF12F5 /* CustomAnnotationView.swift */; };
+		9A4F37DF1F4ACFD900EF12F5 /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F37DE1F4ACFD900EF12F5 /* CustomPointAnnotation.swift */; };
+		9A4F37E11F4AD23100EF12F5 /* CustomPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F37E01F4AD23100EF12F5 /* CustomPolyline.swift */; };
 		9AD6C7A81F48C4CB00C35182 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6C7A71F48C4CB00C35182 /* AppDelegate.swift */; };
 		9AD6C7AA1F48C4CB00C35182 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6C7A91F48C4CB00C35182 /* ViewController.swift */; };
 		9AD6C7AD1F48C4CB00C35182 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD6C7AB1F48C4CB00C35182 /* Main.storyboard */; };
 		9AD6C7AF1F48C4CB00C35182 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD6C7AE1F48C4CB00C35182 /* Assets.xcassets */; };
 		9AD6C7B21F48C4CB00C35182 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD6C7B01F48C4CB00C35182 /* LaunchScreen.storyboard */; };
+		9AEE98A71F4D54D200731651 /* CustomViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEE98A61F4D54D200731651 /* CustomViewContoller.swift */; };
+		9AF198701F49A08500C96DF0 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AF1986F1F49A08500C96DF0 /* Keys.plist */; };
+		9AF1987C1F49CC2300C96DF0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1987B1F49CC2300C96DF0 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87B643364A92A6B19CA1AD27 /* Pods-MapboxTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapboxTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapboxTest/Pods-MapboxTest.debug.xcconfig"; sourceTree = "<group>"; };
+		9A4F37D81F4A244F00EF12F5 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		9A4F37DA1F4A25BC00EF12F5 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		9A4F37DC1F4AC73A00EF12F5 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		9A4F37DE1F4ACFD900EF12F5 /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
+		9A4F37E01F4AD23100EF12F5 /* CustomPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPolyline.swift; sourceTree = "<group>"; };
 		9AD6C7A41F48C4CB00C35182 /* MapboxTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapboxTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD6C7A71F48C4CB00C35182 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AD6C7A91F48C4CB00C35182 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +37,11 @@
 		9AD6C7AE1F48C4CB00C35182 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AD6C7B11F48C4CB00C35182 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AD6C7B31F48C4CB00C35182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AEE98A61F4D54D200731651 /* CustomViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewContoller.swift; sourceTree = "<group>"; };
+		9AF1986F1F49A08500C96DF0 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Keys.plist; path = "../../../../Downloads/Mapbox-iOS-Examples-master/Keys.plist"; sourceTree = "<group>"; };
+		9AF1987B1F49CC2300C96DF0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = "../../../../Downloads/mapApp-master/MapApp/CustomTableViewCell.swift"; sourceTree = "<group>"; };
+		B141871E4C28D017C4234B1F /* Pods_MapboxTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapboxTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B583CCB47AF068E06549BD1A /* Pods-MapboxTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapboxTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapboxTest/Pods-MapboxTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0910869FDBD63A3AC191CE30 /* Pods_MapboxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9ABFE08F16A64934928E7268 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B141871E4C28D017C4234B1F /* Pods_MapboxTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9AD6C79B1F48C4CB00C35182 = {
 			isa = PBXGroup;
 			children = (
 				9AD6C7A61F48C4CB00C35182 /* MapboxTest */,
 				9AD6C7A51F48C4CB00C35182 /* Products */,
+				DB19F967EC00764241A02E7B /* Pods */,
+				9ABFE08F16A64934928E7268 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +87,29 @@
 			children = (
 				9AD6C7A71F48C4CB00C35182 /* AppDelegate.swift */,
 				9AD6C7A91F48C4CB00C35182 /* ViewController.swift */,
+				9A4F37D81F4A244F00EF12F5 /* CreateViewController.swift */,
+				9A4F37DE1F4ACFD900EF12F5 /* CustomPointAnnotation.swift */,
+				9A4F37E01F4AD23100EF12F5 /* CustomPolyline.swift */,
+				9A4F37DC1F4AC73A00EF12F5 /* CustomAnnotationView.swift */,
+				9A4F37DA1F4A25BC00EF12F5 /* GalleryViewController.swift */,
+				9AEE98A61F4D54D200731651 /* CustomViewContoller.swift */,
+				9AF1987B1F49CC2300C96DF0 /* CustomTableViewCell.swift */,
 				9AD6C7AB1F48C4CB00C35182 /* Main.storyboard */,
 				9AD6C7AE1F48C4CB00C35182 /* Assets.xcassets */,
 				9AD6C7B01F48C4CB00C35182 /* LaunchScreen.storyboard */,
+				9AF1986F1F49A08500C96DF0 /* Keys.plist */,
 				9AD6C7B31F48C4CB00C35182 /* Info.plist */,
 			);
 			path = MapboxTest;
+			sourceTree = "<group>";
+		};
+		DB19F967EC00764241A02E7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87B643364A92A6B19CA1AD27 /* Pods-MapboxTest.debug.xcconfig */,
+				B583CCB47AF068E06549BD1A /* Pods-MapboxTest.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +119,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AD6C7B61F48C4CB00C35182 /* Build configuration list for PBXNativeTarget "MapboxTest" */;
 			buildPhases = (
+				55A2E860F8E7BFB48433B2D1 /* [CP] Check Pods Manifest.lock */,
 				9AD6C7A01F48C4CB00C35182 /* Sources */,
 				9AD6C7A11F48C4CB00C35182 /* Frameworks */,
 				9AD6C7A21F48C4CB00C35182 /* Resources */,
+				66B120D4FE22A537E10E617E /* [CP] Embed Pods Frameworks */,
+				3A63F4B2E8BC5063AC63F37F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,17 +178,85 @@
 				9AD6C7B21F48C4CB00C35182 /* LaunchScreen.storyboard in Resources */,
 				9AD6C7AF1F48C4CB00C35182 /* Assets.xcassets in Resources */,
 				9AD6C7AD1F48C4CB00C35182 /* Main.storyboard in Resources */,
+				9AF198701F49A08500C96DF0 /* Keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A63F4B2E8BC5063AC63F37F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapboxTest/Pods-MapboxTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55A2E860F8E7BFB48433B2D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MapboxTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66B120D4FE22A537E10E617E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MapboxTest/Pods-MapboxTest-frameworks.sh",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/MapboxDirections.swift/MapboxDirections.framework",
+				"${BUILT_PRODUCTS_DIR}/Polyline/Polyline.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxDirections.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Polyline.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapboxTest/Pods-MapboxTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9AD6C7A01F48C4CB00C35182 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4F37DF1F4ACFD900EF12F5 /* CustomPointAnnotation.swift in Sources */,
+				9A4F37D91F4A244F00EF12F5 /* CreateViewController.swift in Sources */,
 				9AD6C7AA1F48C4CB00C35182 /* ViewController.swift in Sources */,
+				9A4F37DB1F4A25BC00EF12F5 /* GalleryViewController.swift in Sources */,
+				9AF1987C1F49CC2300C96DF0 /* CustomTableViewCell.swift in Sources */,
+				9A4F37DD1F4AC73A00EF12F5 /* CustomAnnotationView.swift in Sources */,
+				9A4F37E11F4AD23100EF12F5 /* CustomPolyline.swift in Sources */,
+				9AEE98A71F4D54D200731651 /* CustomViewContoller.swift in Sources */,
 				9AD6C7A81F48C4CB00C35182 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +378,7 @@
 		};
 		9AD6C7B71F48C4CB00C35182 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87B643364A92A6B19CA1AD27 /* Pods-MapboxTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UHXURA5898;
@@ -272,6 +392,7 @@
 		};
 		9AD6C7B81F48C4CB00C35182 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B583CCB47AF068E06549BD1A /* Pods-MapboxTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UHXURA5898;
@@ -302,6 +423,7 @@
 				9AD6C7B81F48C4CB00C35182 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

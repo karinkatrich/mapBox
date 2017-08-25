@@ -17,11 +17,10 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, M
     
     var mapView: MGLMapView!
     var customPointAnnotation: CustomPointAnnotation?
-    var selectedPhoto: UIImage!
+    var selectedPhotos = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  myTextField.delegate = self
 
         mapView = MGLMapView(frame: view.bounds)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -50,7 +49,7 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, M
     }
     
     func addTextField() {
-     let myTextField: UITextField = UITextField(frame: CGRect(x: 0, y: 0, width: 200.00, height: 40.00));
+     let myTextField: UITextField = UITextField(frame: CGRect(x: +87, y: +25, width: 200.00, height: 40.00));
         myTextField.placeholder = "Enter text here"
         myTextField.font = UIFont.systemFont(ofSize: 15)
         myTextField.borderStyle = UITextBorderStyle.roundedRect
@@ -60,6 +59,7 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, M
         myTextField.clearButtonMode = UITextFieldViewMode.whileEditing;
         myTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         myTextField.delegate = self
+        myTextField.text = customPointAnnotation?.title
         self.view.addSubview(myTextField)
     }
     
@@ -71,7 +71,7 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, M
         button.sizeToFit()
         button.center.x = self.view.center.x
         button.frame = CGRect(origin: CGPoint(x: button.frame.origin.x - 125, y: self.view.frame.size.height - button.frame.size.height - 15), size: button.frame.size)
-        //        button.addTarget(self, action: #selector(RuntimeToggleLayerExample_Swift.toggleLayer(sender:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         self.view.addSubview(button)
     }
     
@@ -113,8 +113,8 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, M
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-      //  updateSaveButtonState()
-        navigationItem.title = textField.text
+        
+       // myTextField = textField.text
     }
 
     
@@ -145,16 +145,18 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, M
         var pointAnnotations = [CustomPointAnnotation]()
 //        for coordinate in coordinates {
                     let count = pointAnnotations.count + 1
-            customPointAnnotation = CustomPointAnnotation(coordinate: tapCoordinate,
-                                              title: "Custom Point Annotation",
-                subtitle: nil
-                )
+//            customPointAnnotation = CustomPointAnnotation(coordinate: tapCoordinate,
+//                                              title: "Custom Point Annotation",
+//                subtitle: nil
+//                )
+//        
+        customPointAnnotation = CustomPointAnnotation(coordinate: tapCoordinate, title: title!, subtitle: "Custom Point Annotation", images: selectedPhotos)
             
             // Set the custom `image` and `reuseIdentifier` properties, later used in the `mapView:imageForAnnotation:` delegate method.
             // Create a unique reuse identifier for each new annotation image.
             customPointAnnotation?.reuseIdentifier = "customAnnotation\(count)"
             // This dot image grows in size as more annotations are added to the array.
-            customPointAnnotation?.image = dot(size:5 * count)
+            customPointAnnotation?.images = [dot(size:5 * count)]
         
             let imagePickerController = UIImagePickerController()
             
@@ -206,8 +208,8 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, M
             let itemSize = CGSize(width: 49, height: 49);
             let iv = UIImageView(frame: CGRect(x: 0, y: 0, width: 49, height: 49));
         if let point = (UIApplication.shared.delegate as! AppDelegate).users.first,
-            let image = point.image {
-            iv.image = image
+            let images = point.images {
+            iv.images = images
         }
         
 //            iv.setProfilePicture((annotation as! Member).media, itemSize: itemSize);
@@ -223,7 +225,7 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, M
     func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
         if let point = annotation as? CustomPointAnnotation,
             
-            let image = point.image,
+            let images = point.images,
             let reuseIdentifier = point.reuseIdentifier {
             
             if let annotationImage = mapView.dequeueReusableAnnotationImage(withIdentifier: reuseIdentifier) {
@@ -231,7 +233,7 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, M
                 return annotationImage
             } else {
                 // Create a new annotation image.
-                return MGLAnnotationImage(image: image, reuseIdentifier: reuseIdentifier)
+                return MGLAnnotationImage(image: images, reuseIdentifier: reuseIdentifier)
             }
             
         }
@@ -259,14 +261,14 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, M
         
         // The info dictionary may contain multiple representations of the image. You want to use the original.
         if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-                customPointAnnotation?.image = selectedImage
+                customPointAnnotation?.images = [selectedImage]
         }
         else {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
         
         // Set photoImageView to display the selected image.
-       // selectedPhoto.image = selectedImage
+//       selectedPhotos.images = 
         
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)
@@ -279,21 +281,27 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, M
         dismiss(animated: true, completion: nil)
     }
     
-    func savePoint() {
-        if let point = customPointAnnotation {
-            (UIApplication.shared.delegate as! AppDelegate).users.append(point);
-            mapView.addAnnotation(point)
-            customPointAnnotation = nil;
-        }
-    }
+//    func savePoint() {
+//        if let point = customPointAnnotation {
+//            (UIApplication.shared.delegate as! AppDelegate).users.append(point);
+//            mapView.addAnnotation(point)
+//            customPointAnnotation = nil;
+//        }
+//    }
 
+    
     @objc private func saveCustomPointAnnotations() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(customPointAnnotation, toFile: CustomPointAnnotation.ArchiveURL.path)
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(customPointAnnotation!, toFile: CustomPointAnnotation.ArchiveURL.path)
         if isSuccessfulSave {
             os_log("Soldiers successfully saved.", log: OSLog.default, type: .debug)
         } else {
             os_log("Failed to save soldiers...", log: OSLog.default, type: .error)
         }
     }
+    
+     @objc private func goBack() {
+    _ = navigationController?.popViewController(animated: true)
+    }
+    
 
 }

@@ -129,7 +129,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="locationCell" id="FZh-FU-D5d" customClass="CustomTableViewCell" customModule="MapboxTest" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="locationCell" id="FZh-FU-D5d" customClass="RoadMapTableViewCell" customModule="MapboxTest" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FZh-FU-D5d" id="8EZ-1R-Ruo">
@@ -155,8 +155,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="titleLabel" destination="uju-5b-eJq" id="oBR-Co-BK9"/>
-                                    <segue destination="8Az-8Y-KDQ" kind="showDetail" id="7Xs-md-rC0"/>
+                                    <outlet property="titleLabel" destination="uju-5b-eJq" id="NaX-R4-OGk"/>
+                                    <segue destination="8Az-8Y-KDQ" kind="showDetail" identifier="showDetail" id="7Xs-md-rC0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -177,10 +177,10 @@
             </objects>
             <point key="canvasLocation" x="1084" y="916.1919040479761"/>
         </scene>
-        <!--View Controller-->
+        <!--Road Map View Contoller-->
         <scene sceneID="ORP-cQ-Exp">
             <objects>
-                <viewController id="8Az-8Y-KDQ" sceneMemberID="viewController">
+                <viewController id="8Az-8Y-KDQ" customClass="RoadMapViewContoller" customModule="MapboxTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zVX-qd-eJU"/>
                         <viewControllerLayoutGuide type="bottom" id="N9j-xK-VwD"/>
